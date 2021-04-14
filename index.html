@@ -1,97 +1,86 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
+<meta charset="UTF-8"/>
+<meta http-equiv="cache-control" content="max-age=200"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Glenmark</title>
+<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.base {
-position: relative;
-display: inline;
-}
-
-</style>
+<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
 </head>
 
 <body>
-<div class="base"><h3><u>Cardio EVA</u></h3><br>
-<a href="1Cardio/1Telma/html/index.html" target="_blank">Telma</a><br><br>
-<a href="1Cardio/2TelmaH/html/index.html" target="_blank">Telma H</a><br><br>
-<a href="1Cardio/3TelmaBeta/html/index.html" target="_blank">Telma Beta</a><br><br>
-<a href="1Cardio/4Rivaxon/html/index.html" target="_blank">Rivaxon</a><br><br>
-<a href="1Cardio/5Azeldip/html/index.html" target="_blank">Azeldip</a><br><br>
-<a href="1Cardio/6TelmaLN/html/index.html" target="_blank">Telma LN/LNC</a><br><br>
-<a href="1Cardio/7EptusT/html/index.html" target="_blank">Eptus T</a><br><br>
-<a href="1Cardio/8TelmaD/html/index.html" target="_blank">Telma D</a><br><br>
-<a href="1Cardio/9Tolvasca/html/index.html" target="_blank">Tolvasca</a><br><br>
+<div id="wrapper" rel="1">
+  <div class="menu"> <img src="menu.png" width="37" alt=""> </div>
+  <div class="slide_arrow">
+    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
+    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
+  </div>
+  <div id="main_content"></div>
+  <div class="reference active">
+    <div class="box">
+      <div class="slide_jumper">
+		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
+      </div>
+    </div>
+    <div class="box_btn"></div>
+  </div>
 </div>
+<div id="myconsole"></div>
+<div id="click_through" > </div>
+<script src="global.js" type="text/javascript" language="javascript"></script> 
+<script>
+var startTime = Date.now();
 
-<br>
-<div class="base"><h3><u>Diabeto EVA</u></h3><br>
-<a href="2Diabeto/1Telma/html/index.html" target="_blank">Telma</a><br><br>
-<a href="2Diabeto/2TelmaLN/html/index.html" target="_blank">Telma LN/LNC</a><br><br>
-<a href="2Diabeto/3Azeldip/html/index.html" target="_blank">Azeldip</a><br><br>
-<a href="2Diabeto/4TelmaH/html/index.html" target="_blank">Telma H</a><br><br>
-<a href="2Diabeto/5TelmaBeta/html/index.html" target="_blank">Telma Beta</a><br><br>
-<a href="2Diabeto/6Rivaxon/html/index.html" target="_blank">Rivaxon</a><br><br>
-<a href="2Diabeto/7EptusT/html/index.html" target="_blank">Eptus T</a><br><br>
-<a href="2Diabeto/8TelmaD/html/index.html" target="_blank">Telma D</a><br><br>
-<a href="2Diabeto/9Tolvasca/html/index.html" target="_blank">Tolvasca</a><br><br>
-</div>
+//step 1:
+var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
+	
+	if(temp == null){
+		localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
+		localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
+		//to capture start time of 1st slide in db format
+		var startTime1InDBFormat = currentTimeInDatabaseFormat();
+		//alert(startTime1InDBFormat);
+		localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
+	}
+//step 1 ends here..
 
-<br>
-<div class="base"><h3><u>CP EVA</u></h3><br>
-<a href="3CP/1Telma/html/index.html" target="_blank">Telma</a><br><br>
-<a href="3CP/2TelmaH/html/index.html" target="_blank">Telma H</a><br><br>
-<a href="3CP/3TelmaBeta/html/index.html" target="_blank">Telma Beta</a><br><br>
-<a href="3CP/4TelmaLN/html/index.html" target="_blank">Telma LN/LNC</a><br><br>
-<a href="3CP/5Azeldip/html/index.html" target="_blank">Azeldip</a><br><br>
-<a href="3CP/6Rivaxon/html/index.html" target="_blank">Rivaxon</a><br><br>
-<a href="3CP/7EptusT/html/index.html" target="_blank">Eptus T</a><br><br>
-<a href="3CP/8TelmaD/html/index.html" target="_blank">Telma D</a><br><br>
-<a href="3CP/9Tolvasca/html/index.html" target="_blank">Tolvasca</a><br><br>
-</div>
+$(document).ready(function(){
+  // jQuery(".next").bind(event, function(){
+  //     document.location = 'VoltarenVAsb/VoltarenVAsb.html';
+  //     });
+var selectedContentPath = 'slide1/';
+//  document.getElementById("main_content").innerHTML='<object type="text/html" width="1024px" height="768px" data="'+selectedContentPath+"Dlight1.htm"+'"></object>';
 
-<br>
-<div class="base"><h3><u>NEURO EVA</u></h3><br>
-<a href="4Neuro/1Telma/html/index.html" target="_blank">Telma</a><br><br>
-<a href="4Neuro/2TelmaH/html/index.html" target="_blank">Telma H</a><br><br>
-<a href="4Neuro/3Rivaxon/html/index.html" target="_blank">Rivaxon</a><br><br>
-<a href="4Neuro/4TelmaBeta/html/index.html" target="_blank">Telma Beta</a><br><br>
-<a href="4Neuro/5Azeldip/html/index.html" target="_blank">Azeldip</a><br><br>
-<a href="4Neuro/6TelmaLN/html/index.html" target="_blank">Telma LN/LNC</a><br><br>
-<a href="4Neuro/7EptusT/html/index.html" target="_blank">Eptus T</a><br><br>
-<a href="4Neuro/8TelmaD/html/index.html" target="_blank">Telma D</a><br><br>
-<a href="4Neuro/9Tolvasca/html/index.html" target="_blank">Tolvasca</a><br><br>
-</div>
+//custom slide additional code begins here....
 
-<br>
-<div class="base"><h3><u>NEPHRO EVA</u></h3><br>
-<a href="2Diabeto/1Telma/html/index.html" target="_blank">Telma</a><br><br>
-<a href="2Diabeto/2TelmaLN/html/index.html" target="_blank">Telma LN/LNC</a><br><br>
-<a href="2Diabeto/3Azeldip/html/index.html" target="_blank">Azeldip</a><br><br>
-<a href="2Diabeto/4TelmaH/html/index.html" target="_blank">Telma H</a><br><br>
-<a href="2Diabeto/5TelmaBeta/html/index.html" target="_blank">Telma Beta</a><br><br>
-<a href="2Diabeto/6Rivaxon/html/index.html" target="_blank">Rivaxon</a><br><br>
-<a href="2Diabeto/7EptusT/html/index.html" target="_blank">Eptus T</a><br><br>
-<a href="2Diabeto/8TelmaD/html/index.html" target="_blank">Telma D</a><br><br>
-<a href="2Diabeto/9Tolvasca/html/index.html" target="_blank">Tolvasca</a><br><br>
-</div>
+if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
+	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
+	
+	switch(custcomslideid){
+		case 1:
+		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"></div><div class="s1_2"><img src="slide1/s1_2.png"></div><div class="s1_3_wrap"><div class="s1_3"><img src="slide1/s1_3.png"></div></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s2_1"><img src="slide1/s2_1.png"></div><div class="s3_1"><img src="slide1/s3_1.png"></div><div class="s3_2"><img src="slide1/s3_2.png"></div><div class="s3_3"><img src="slide1/s3_3.gif"></div><div class="s1_pop1" onclick="s1_pop1()"></div><div class="s1_c1ose1" onclick="s1_close1()"></div><div class="s1_pop2" onclick="s1_pop2()"></div><div class="s1_c1ose2" onclick="s1_close2()"></div>';
+		break;
+	}
 
-<br>
-<div class="base"><h3><u>GP EVA</u></h3><br>
-<a href="3CP/1Telma/html/index.html" target="_blank">Telma</a><br><br>
-<a href="3CP/2TelmaH/html/index.html" target="_blank">Telma H</a><br><br>
-<a href="3CP/3TelmaBeta/html/index.html" target="_blank">Telma Beta</a><br><br>
-<a href="3CP/4TelmaLN/html/index.html" target="_blank">Telma LN/LNC</a><br><br>
-<a href="3CP/5Azeldip/html/index.html" target="_blank">Azeldip</a><br><br>
-<a href="3CP/6Rivaxon/html/index.html" target="_blank">Rivaxon</a><br><br>
-<a href="3CP/7EptusT/html/index.html" target="_blank">Eptus T</a><br><br>
-<a href="3CP/8TelmaD/html/index.html" target="_blank">Telma D</a><br><br>
-<a href="3CP/9Tolvasca/html/index.html" target="_blank">Tolvasca</a><br><br>
-</div>
+	$("#main_content").html(content);
+	  localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+
+//custom slide additional code ends here....	 
+	 
+}else{
+
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"></div><div class="s1_2"><img src="slide1/s1_2.png"></div><div class="s1_3_wrap"><div class="s1_3"><img src="slide1/s1_3.png"></div></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s2_1"><img src="slide1/s2_1.png"></div><div class="s3_1"><img src="slide1/s3_1.png"></div><div class="s3_2"><img src="slide1/s3_2.png"></div><div class="s3_3"><img src="slide1/s3_3.gif"></div><div class="s1_pop1" onclick="s1_pop1()"></div><div class="s1_c1ose1" onclick="s1_close1()"></div><div class="s1_pop2" onclick="s1_pop2()"></div><div class="s1_c1ose2" onclick="s1_close2()"></div>');
+
+}
+
+});
+</script> 
 
 </body>
 </html>
