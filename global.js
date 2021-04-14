@@ -492,16 +492,17 @@ $(document).ready(function(){
 
 /*--------------------- animation javascript -----------------------*/
 
-setTimeout(function(){ $('.s1_pop1, .s1_pop2').css("display","block"); }, 2000);
+$('.s1_pop1').css("display","block").delay(1000);
+
 function s1_pop1() {
 	$('.s1_2').css("display","none");
 	$('.s1_3').css("display","block");
 	$('.s1_pop1').css("display","none");
 	$('.s1_pop2').css("display","none");
-	setTimeout(function(){ $('.s2_1').css("display","block"); }, 1500);
-	setTimeout(function(){ $('.s3_1').css("display","block"); }, 4500);
-	setTimeout(function(){ $('.s3_2').css("display","block"); }, 5000);
-	setTimeout(function(){ $('.s3_3').css("display","block"); }, 5500);
+	$('.s2_1').css("display","block");
+	$('.s3_1').css("display","block");
+	$('.s3_2').css("display","block");
+	$('.s3_3').css("display","block");
 }
 
 function s1_pop2() {
@@ -509,8 +510,8 @@ function s1_pop2() {
 	$('.s1_5').css("display","block");
 	$('.s1_pop1').css("display","none");
 	$('.s1_pop2').css("display","none");
-	setTimeout(function(){ $('.s2_1').css("display","block"); }, 1500);
-	setTimeout(function(){ $('.s3_1').css("display","block"); }, 4500);
-	setTimeout(function(){ $('.s3_2').css("display","block"); }, 5000);
-	setTimeout(function(){ $('.s3_3').css("display","block"); }, 5500);
+	$('.s2_1').css("display","block");
+	$('.s3_1').css("display","block");
+	$('.s3_2').css("display","block");
+	$('.s3_3').css("display","block");
 }
