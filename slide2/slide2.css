@@ -7,4 +7,81 @@
 	position: absolute;
 	width: 1024px;
 	height: 768px;
+	z-index: 1;
+}
+
+.s2_pop1 {
+	position: absolute;
+    left: 20px;
+	top: 704px;
+	width: 63px;
+	height: 60px;
+	z-index: 3;
+}
+
+.s2_c1ose1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 7;
+}
+
+.s2_3 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	animation: slideInDown 0.7s;
+	animation-delay: 0.1s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s2_3_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	animation: slideOutUp 0.7s;
+	animation-delay: 0.1s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s2_pop2 {
+	position: absolute;
+    left: 85px;
+	top: 704px;
+	width: 57px;
+	height: 60px;
+	z-index: 3;
+}
+
+.s2_c1ose2 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 7;
+}
+
+.s2_4 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	animation: slideInDown 0.7s;
+	animation-delay: 0.1s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s2_4_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	animation: slideOutUp 0.7s;
+	animation-delay: 0.1s;
+	animation-fill-mode: both;
+	z-index: 5;
 }
