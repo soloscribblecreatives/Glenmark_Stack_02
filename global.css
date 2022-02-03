@@ -237,3 +237,44 @@ html[xmlns] .clearfix {
 	background-color: rgba(0,0,0,0.5);
 	color: #ffffff;
 }
+
+.click1 {
+  position: absolute;
+  left: 71px;
+  top: 198px;
+  width: 285px;
+  height: 234px;
+  opacity:0;
+  z-index: 9999;
+}
+
+.click2 {
+  position: absolute;
+  left: 368px;
+  top: 198px;
+  width: 285px;
+  height: 236px;
+  opacity:0;
+  z-index: 9999;
+}
+
+.click3 {
+  position: absolute;
+  left: 666px;
+  top: 198px;
+  width: 284px;
+  height: 234px;
+  opacity:0;
+  z-index: 9999;
+}
+
+.home1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0px;
+  right: 0px;
+  opacity:0;
+  display: none;
+  z-index: 9999;
+}
