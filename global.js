@@ -563,6 +563,11 @@ $(document).ready(function(){
 
 function s2_close1() {
 	$('.s2_1').css("display","none");
-	$('.home1').css("display","block");
 	$(".s2_2").addClass("s2_2_fade");
+	
+	setTimeout(
+		function() 
+		{
+			$('.home1').css("display","block");
+		}, 2000);
 }

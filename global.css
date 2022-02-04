@@ -274,7 +274,7 @@ html[xmlns] .clearfix {
   height: 150px;
   top: 0px;
   right: 0px;
-  opacity:0;
+  opacity: 0;
   display: none;
   z-index: 9999;
 }
