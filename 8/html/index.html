@@ -27,8 +27,6 @@
       <div class="slide_jumper">
 		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
           <div class="slides"><img src="thumbs/02.png" alt=""></div>
-          <div class="slides"><img src="thumbs/03.png" alt=""></div>
-          <div class="slides"><img src="thumbs/04.png" alt=""></div>     
       </div>
     </div>
     <div class="box_btn"></div>
@@ -64,18 +62,12 @@ var selectedContentPath = 'slide1/';
 if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
 	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
 	
-	switch(custcomslideid){
+switch(custcomslideid){
 	case 1:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
-	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-    case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div><div class="s3_1"><img src="slide3/2.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop1" onclick="s3_pop1()"></div><div class="s3_2"><img src="slide3/3.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop2" onclick="s3_pop2()"></div><div class="s3_3"><img src="slide3/4.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop3" onclick="s3_pop3()"></div><div class="s3_4"><img src="slide3/5.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop4" onclick="s3_pop4()"></div><div class="s3_c1ose1" onclick="s3_close1()"></div>';
-	break;
-    case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
+    case 2:
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="s3_1"><img src="slide2/2.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop1" onclick="s3_pop1()"></div><div class="s3_2"><img src="slide2/3.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop2" onclick="s3_pop2()"></div><div class="s3_3"><img src="slide2/4.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop3" onclick="s3_pop3()"></div><div class="s3_4"><img src="slide2/5.jpg" width="1024" height="768" alt=""/></div><div class="s3_pop4" onclick="s3_pop4()"></div><div class="s3_c1ose1" onclick="s3_close1()"></div>';
 	break;
 }
 
