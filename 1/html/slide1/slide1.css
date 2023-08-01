@@ -12,12 +12,12 @@
 
 .s2 {
   position: absolute;
-  left: 30px;
-  top: 130px;
-  width: 568px;
-  height: 179px;
-  animation: flipInX 1s;
-  animation-delay: 0.5s;
+  left: 206px;
+  top: 117px;
+  width: 625px;
+  height: 196px;
+  animation: flipInX 0.5s;
+  animation-delay: 0s;
   animation-fill-mode: both;
   z-index: 2;
 }
