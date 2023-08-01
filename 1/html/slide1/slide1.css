@@ -12,10 +12,10 @@
 
 .s2 {
   position: absolute;
-  left: 540px;
-  top: 135px;
-  width: 374px;
-  height: 126px;
+  left: 30px;
+  top: 130px;
+  width: 568px;
+  height: 179px;
   animation: flipInX 1s;
   animation-delay: 0.5s;
   animation-fill-mode: both;
@@ -24,12 +24,12 @@
 
 .s3 {
   position: absolute;
-  left: 112px;
-  top: 109px;
-  width: 353px;
-  height: 154px;
-  animation: flipInX 1s;
-  animation-delay: 0s;
+  left: 796px;
+  top: 156px;
+  width: 167px;
+  height: 167px;
+  animation: stampIn 0.3s;
+  animation-delay: 1.5s;
   animation-fill-mode: both;
   z-index: 3;
 }
