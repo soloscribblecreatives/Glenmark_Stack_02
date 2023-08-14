@@ -396,7 +396,7 @@ switch(pg_id){
 	case 4:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="4/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
 	break;
-	case 5:
+	/* case 5:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="5/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
 	break;
 	case 6:
@@ -409,8 +409,8 @@ switch(pg_id){
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="8/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
 	break;
 	case 9:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="9/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
-	break;
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="9/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>'; 
+	break; */
 }
 
 return content;
