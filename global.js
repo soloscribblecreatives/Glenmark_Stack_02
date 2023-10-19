@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3_wrap pulseIn-1"><div class="s1_3"><img src="slide1/s1_3.png"/></div></div><div class="s1_4_wrap pulseIn-2"><div class="s1_4"><img src="slide1/s1_4.png"/></div></div><div class="s1_5_wrap pulseIn-3"><div class="s1_5"><img src="slide1/s1_5.png"/></div></div><div class="s1_6 slideInUp"><img src="slide1/s1_6.png"/></div><div class="s1_7 slideInDown"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div><div class="hitStart" onclick="hitStart()"></div><div class="popBubble1" onclick="popBubble1()"></div><div class="popBubble2" onclick="popBubble2()"></div><div class="popBubble3" onclick="popBubble3()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3_wrap pulseIn-1"><div class="s1_3"><img src="slide1/s1_3.png"/></div></div><div class="s1_4_wrap pulseIn-2"><div class="s1_4"><img src="slide1/s1_4.png"/></div></div><div class="s1_5_wrap pulseIn-3"><div class="s1_5"><img src="slide1/s1_5.png"/></div></div><div class="s1_6 slideInUp"><img src="slide1/s1_6.png"/></div><div class="s1_7 slideInDown"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div><div class="start"><img src="slide1/start.png"/></div><div class="hitStart" onclick="hitStart()"></div><div class="popBubble1" onclick="popBubble1()"></div><div class="popBubble2" onclick="popBubble2()"></div><div class="popBubble3" onclick="popBubble3()"></div>';
 	break;
 
 }
@@ -498,6 +498,7 @@ function hitStart() {
 	$(".s1_6").addClass("slideOutDown");
 	$(".s1_7").removeClass("slideInDown");
 	$(".s1_7").addClass("slideOutUp");
+	$('.start').css("display","none");
 	$('.hitStart').css("display","none");
 	$('.popBubble1').css("display","block");
 	$('.popBubble2').css("display","block");
