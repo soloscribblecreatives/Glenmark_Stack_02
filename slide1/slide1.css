@@ -237,8 +237,8 @@
   top: 480px;
   width: 413px;
   height: 288px;
-	animation: zoomInUp 1s;
-	animation-delay: 3.5s;
+	animation: slideInUp 1s;
+	animation-delay: 4s;
 	animation-fill-mode: both;
 	display: none;
 	z-index: 35;
