@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3_wrap pulseIn-1"><div class="s1_3"><img src="slide1/s1_3.png"/></div></div><div class="s1_4_wrap pulseIn-2"><div class="s1_4"><img src="slide1/s1_4.png"/></div></div><div class="s1_5_wrap pulseIn-3"><div class="s1_5"><img src="slide1/s1_5.png"/></div></div><div class="s1_6 slideInUp"><img src="slide1/s1_6.png"/></div><div class="s1_7 slideInDown"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div><div class="start"><img src="slide1/start.png"/></div><div class="hitStart" onclick="hitStart()"></div><div class="popBubble1" onclick="popBubble1()"></div><div class="popBubble2" onclick="popBubble2()"></div><div class="popBubble3" onclick="popBubble3()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1" onclick="showBG2()"><img src="slide1/bg1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide1/bg2.png" width="1024" height="768" alt=""/></div><div class="s1_3"><img src="slide1/bg3.png" width="1024" height="768" alt=""/></div><div class="s1_4" onclick="showM2()"><img src="slide1/m1.png"/></div><div class="s1_5" onclick="showC2()"><img src="slide1/c1.png"/></div><div class="s1_6 " onclick="showT2()"><img src="slide1/t1.png"/></div><div class="s1_7"><img id="s1_7" src="slide1/m2.png"/></div><div class="s1_8"><img id="s1_8" src="slide1/c2.png"/></div><div class="s1_9"><img id="s1_9" src="slide1/t2.png"/></div><div class="s1_10"><img src="slide1/m3.png"/></div><div class="s1_11"><img src="slide1/c3.png"/></div><div class="s1_12"><img src="slide1/t3.png"/></div><div class="s1_13_wrap"><div class="s1_13"><img src="slide1/key.png"/></div></div>';
 	break;
 
 }
@@ -493,48 +493,35 @@ $(document).ready(function(){
 
 /*--------------------- animation javascript -----------------------*/
 
-function hitStart() {
-	$(".s1_6").removeClass("slideInUp");
-	$(".s1_6").addClass("slideOutDown");
-	$(".s1_7").removeClass("slideInDown");
-	$(".s1_7").addClass("slideOutUp");
-	$('.start').css("display","none");
-	$('.hitStart').css("display","none");
-	$('.popBubble1').css("display","block");
-	$('.popBubble2').css("display","block");
-	$('.popBubble3').css("display","block");
+
+function showBG2() {
+	$('.s1_1').css("display","none");
+	$('.s1_2').css("display","block");
+	$('.s1_4').css("display","block");
+	$('.s1_5').css("display","block");
+	$('.s1_6').css("display","block");
 }
 
-
-function popBubble1() {
-	$(".s1_3_wrap").removeClass("pulseIn-1");
-	$(".s1_3_wrap").addClass("bounceOut");
-	$('.popBubble1').css("display","none");
-	
-	if ($(".s1_3_wrap").hasClass("bounceOut") && $(".s1_4_wrap").hasClass("bounceOut") && $(".s1_5_wrap").hasClass("bounceOut"))
-	{
-		$('.s1_8, .s1_9, .s1_10, .s1_11').css("display","block");
-	}
+function showM2() {
+	$('.s1_4').css("display","none");
+	$('.s1_7').css("display","block");
+	$('.s1_10').css("display","block");
+	$(".s1_13").addClass("keyMove1");
 }
 
-function popBubble2() {
-	$(".s1_4_wrap").removeClass("pulseIn-2");
-	$(".s1_4_wrap").addClass("bounceOut");
-	$('.popBubble2').css("display","none");
-	
-	if ($(".s1_3_wrap").hasClass("bounceOut") && $(".s1_4_wrap").hasClass("bounceOut") && $(".s1_5_wrap").hasClass("bounceOut"))
-	{
-		$('.s1_8, .s1_9, .s1_10, .s1_11').css("display","block");
-	}
+function showC2() {
+	$('.s1_5').css("display","none");
+	$('.s1_8').css("display","block");
+	$('.s1_11').css("display","block");
+	$(".s1_13").removeClass("keyMove1");
+	$(".s1_13").addClass("keyMove2");
 }
 
-function popBubble3() {
-	$(".s1_5_wrap").removeClass("pulseIn-3");
-	$(".s1_5_wrap").addClass("bounceOut");
-	$('.popBubble3').css("display","none");
-	
-	if ($(".s1_3_wrap").hasClass("bounceOut") && $(".s1_4_wrap").hasClass("bounceOut") && $(".s1_5_wrap").hasClass("bounceOut"))
-	{
-		$('.s1_8, .s1_9, .s1_10, .s1_11').css("display","block");
-	}
+function showT2() {
+	$('.s1_6').css("display","none");
+	$('.s1_9').css("display","block");
+	$('.s1_12').css("display","block");
+	$(".s1_13").removeClass("keyMove2");
+	$(".s1_13").addClass("keyMove3");
+	$('.s1_3').css("display","block");
 }
