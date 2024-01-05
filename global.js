@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1" onclick="showBG2()"><img src="slide1/bg1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide1/bg2.png" width="1024" height="768" alt=""/></div><div class="s1_3"><img src="slide1/bg3.png" width="1024" height="768" alt=""/></div><div class="s1_4" onclick="showM2()"><img src="slide1/m1.png"/></div><div class="s1_5" onclick="showC2()"><img src="slide1/c1.png"/></div><div class="s1_6 " onclick="showT2()"><img src="slide1/t1.png"/></div><div class="s1_7"><img id="s1_7" src="slide1/m2.png"/></div><div class="s1_8"><img id="s1_8" src="slide1/c2.png"/></div><div class="s1_9"><img id="s1_9" src="slide1/t2.png"/></div><div class="s1_10"><img src="slide1/m3.png"/></div><div class="s1_11"><img src="slide1/c3.png"/></div><div class="s1_12"><img src="slide1/t3.png"/></div><div class="s1_13_wrap"><div class="s1_13"><img src="slide1/key.png"/></div></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2_wrap" onclick="showBG2()"><div class="s1_2"><img src="slide1/s1_2.png"/></div></div><div class="bg_2"><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6_wrap"><div class="s1_6"><img src="slide1/s1_6.png"/></div></div><div class="s1_7_wrap"><div class="s1_7"><img src="slide1/s1_7.png"/></div></div><div class="s1_8_wrap"><div class="s1_8"><img src="slide1/s1_8.png"/></div></div><div class="s1_9"><img src="slide1/s1_9.png"/></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div><div class="s1_12"><img src="slide1/s1_12.png"/></div><div class="hit1" onclick="showM2()"></div><div class="hit2" onclick="showC2()"></div><div class="hit3" onclick="showT2()"></div></div><div class="s1_13"><img src="slide1/s1_13.png"/></div><div class="s1_14"><img src="slide1/s1_14.png"/></div><div class="s1_15"><img src="slide1/s1_15.gif"/></div><div class="s1_16"><img src="slide1/s1_16.png"/></div>';
 	break;
 
 }
@@ -495,33 +495,29 @@ $(document).ready(function(){
 
 
 function showBG2() {
-	$('.s1_1').css("display","none");
-	$('.s1_2').css("display","block");
-	$('.s1_4').css("display","block");
-	$('.s1_5').css("display","block");
-	$('.s1_6').css("display","block");
+	$('.bg_2').css("display","block");
+	$('.bg_2').addClass("slideInUp");
+	$(".s1_2_wrap").addClass("bounceOut");
 }
 
 function showM2() {
-	$('.s1_4').css("display","none");
-	$('.s1_7').css("display","block");
-	$('.s1_10').css("display","block");
-	$(".s1_13").addClass("keyMove1");
+	$(".s1_6").addClass("moveUp1");
+	$('.hit1').css("display","none");
+	$('.hit2').css("display","block");
 }
 
 function showC2() {
-	$('.s1_5').css("display","none");
-	$('.s1_8').css("display","block");
-	$('.s1_11').css("display","block");
-	$(".s1_13").removeClass("keyMove1");
-	$(".s1_13").addClass("keyMove2");
+	$(".s1_7").addClass("moveUp2");
+	$('.hit2').css("display","none");
+	$('.hit3').css("display","block");
 }
 
 function showT2() {
-	$('.s1_6').css("display","none");
-	$('.s1_9').css("display","block");
-	$('.s1_12').css("display","block");
-	$(".s1_13").removeClass("keyMove2");
-	$(".s1_13").addClass("keyMove3");
-	$('.s1_3').css("display","block");
+	$(".s1_8").addClass("moveUp3");
+	$('.hit3').css("display","none");
+	$('.bg_2').removeClass("slideInUp");
+	$('.bg_2').addClass("slideOutDown");
+	$('.s1_13').css("display","block");
+	$('.s1_14').css("display","block");
+	$('.s1_15').css("display","block");
 }
