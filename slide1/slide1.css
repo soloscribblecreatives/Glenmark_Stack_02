@@ -10,6 +10,11 @@
 	z-index: 1;
 }
 
+audio {
+	position: absolute;
+	z-index: 999999;
+}
+
 .s1_2_wrap {
 	position: absolute;
   left: 284px;
@@ -53,7 +58,7 @@
 
 .slideOutDown {
 	animation: slideOutDown 0.5s;
-	animation-delay: 2s;
+	animation-delay: 3.5s;
 	animation-fill-mode: both;
 }
 
@@ -75,7 +80,11 @@
 	z-index: 8;
 }
 
-
+.openLock {
+	animation: openLock 1s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+}
 
 .s1_5 {
 	position: absolute;
@@ -245,7 +254,7 @@
   width: 661px;
   height: 694px;
 	animation: fadeIn 0.7s;
-	animation-delay: 2s;
+	animation-delay: 3.5s;
 	animation-fill-mode: both;
 	display: none;
 	z-index: 18;
@@ -258,7 +267,7 @@
   width: 284px;
   height: 414px;
 	animation: zoomIn 0.5s;
-	animation-delay: 3s;
+	animation-delay: 4.5s;
 	animation-fill-mode: both;
 	display: none;
 	z-index: 20;
@@ -271,7 +280,7 @@
   width: 486px;
   height: 153px;
 	animation: fadeInUp 0.5s;
-	animation-delay: 3.5s;
+	animation-delay: 5s;
 	animation-fill-mode: both;
 	display: none;
 	z-index: 20;
@@ -338,6 +347,19 @@
   top: -252px;
   width: 93px;
   height: 520px;
+  opacity: 1;
+  }
+}
+
+
+@keyframes openLock {
+  0% {
+  opacity: 1;
+  transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+  transform: rotate3d(0, 0, 1, 60deg);
   opacity: 1;
   }
 }
