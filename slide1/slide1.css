@@ -10,11 +10,6 @@
 	z-index: 1;
 }
 
-audio {
-	position: absolute;
-	z-index: 999999;
-}
-
 .s1_2_wrap {
 	position: absolute;
   left: 284px;
