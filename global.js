@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2_wrap" onclick="showBG2()"><div class="s1_2"><img src="slide1/s1_2.png"/></div></div><div class="bg_2"><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6_wrap"><div class="s1_6"><img src="slide1/s1_6.png"/></div></div><div class="s1_7_wrap"><div class="s1_7"><img src="slide1/s1_7.png"/></div></div><div class="s1_8_wrap"><div class="s1_8"><img src="slide1/s1_8.png"/></div></div><div class="s1_9"><img src="slide1/s1_9.png"/></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div><div class="s1_12"><img src="slide1/s1_12.png"/></div><div class="hit1" onclick="showM2()"></div><div class="hit2" onclick="showC2()"></div><div class="hit3" onclick="showT2()"></div></div><div class="s1_13"><img src="slide1/s1_13.png"/></div><div class="s1_14"><img src="slide1/s1_14.png"/></div><div class="s1_15"><img src="slide1/s1_15.gif"/></div><div class="s1_16"><img src="slide1/s1_16.png"/></div><audio id="unlock" src="slide1/unlock.mp3" type="audio/mpeg"></audio><audio id="fanfare" src="slide1/fanfare.mp3" type="audio/mpeg"></audio><audio id="swoosh" src="slide1/swoosh.mp3" type="audio/mpeg"></audio><audio id="clicker" src="slide1/clicker.mp3" type="audio/mpeg"></audio>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2_wrap" onclick="showBG2()"><div class="s1_2"><img src="slide1/s1_2.png"/></div></div><div class="s1_3" onclick="openBox()"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_13"><img src="slide1/s1_13.png"/></div><div class="s1_14"><img src="slide1/s1_14.png"/></div><div class="s1_15"><img src="slide1/s1_15.gif"/></div><div class="s1_16"><img src="slide1/s1_16.png"/></div><audio id="unlock" src="slide1/unlock.mp3" type="audio/mpeg"></audio><audio id="fanfare" src="slide1/fanfare.mp3" type="audio/mpeg"></audio><audio id="success" src="slide1/success.mp3" type="audio/mpeg"></audio><audio id="swoosh" src="slide1/swoosh.mp3" type="audio/mpeg"></audio><audio id="bloop" src="slide1/bloop.mp3" type="audio/mpeg"></audio><div class="hit_1"><img src="slide1/pop1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_2"><img src="slide1/pop2.png" width="1024" height="768" alt=""/></div><div class="hit_pop2" onclick="hit_pop2()"></div><div class="hit_3"><img src="slide1/pop3.png" width="1024" height="768" alt=""/></div><div class="hit_pop3" onclick="hit_pop3()"></div><div class="hit_close1" onclick="hit_close1()"></div><input type="text" id="text">';
 	break;
 
 }
@@ -496,39 +496,65 @@ $(document).ready(function(){
 
 function showBG2() {
 	document.getElementById("swoosh").play();
-	$('.bg_2').css("display","block");
-	$('.bg_2').addClass("slideInUp");
+	$('.s1_3').css("display","block");
+	$('.s1_3').addClass("fadeInUp");
 	$(".s1_2_wrap").addClass("bounceOut");
 }
 
-function showM2() {
-	document.getElementById("clicker").play();
-	$(".s1_6").addClass("moveUp1");
-	$('.hit1').css("display","none");
-	$('.hit2').css("display","block");
+function openBox() {
+	document.getElementById("success").play();
+	$('.s1_3').css("display","none");
+	$('.s1_4').css("display","block");
+	$('.s1_5').css("display","block");
+	setTimeout(function(){
+		$('.hit1').css("display","block");
+		$('.hit2').css("display","block");
+		$('.hit3').css("display","block");
+	}, 1000);
 }
 
-function showC2() {
-	document.getElementById("clicker").play();
-	$(".s1_7").addClass("moveUp2");
-	$('.hit2').css("display","none");
-	$('.hit3').css("display","block");
+/*--------------------- animation javascript -----------------------*/
+
+var a = 1;
+
+function hit_pop1() {
+	document.getElementById("bloop").play();
+	$('.hit_1').css("display","block");
+	$('.hit_close1').css("display","block");
+	$('.hit_pop1').css("display","none");
+	$('.s1_6').css("display","block");
 }
 
-function showT2() {
-	document.getElementById("clicker").play();
-	$(".s1_8").addClass("moveUp3");
-	$('.hit3').css("display","none");
-	$('.bg_2').removeClass("slideInUp");
-	$('.bg_2').addClass("slideOutDown");
-	$('.s1_4').addClass("openLock");
-	$('.s1_13').css("display","block");
-	$('.s1_14').css("display","block");
-	$('.s1_15').css("display","block");
-	setTimeout(function(){
-		document.getElementById("unlock").play();
-	}, 1400);
-	setTimeout(function(){
-		document.getElementById("fanfare").play();
-	}, 4500);
+function hit_pop2() {
+	document.getElementById("bloop").play();
+	$('.hit_2').css("display","block");
+	$('.hit_close1').css("display","block");
+	$('.hit_pop2').css("display","none");
+	$('.s1_7').css("display","block");
+}
+
+function hit_pop3() {
+	document.getElementById("bloop").play();
+	$('.hit_3').css("display","block");
+	$('.hit_close1').css("display","block");
+	$('.hit_pop3').css("display","none");
+	$('.s1_8').css("display","block");
+}
+
+function hit_close1() {
+	$('.hit_1').css("display","none");
+	$('.hit_2').css("display","none");
+	$('.hit_3').css("display","none");
+	$('.hit_close1').css("display","none");
+	var textBox = document.getElementById("text");
+    textBox.value = a;
+    a++;
+	if (textBox.value == 3) {
+		$('.s1_12,.s1_13,.s1_14,.s1_15').css("display","block");
+		$('.hit_pop1,.hit_pop2,.hit_pop3').css("display","none");
+		$('.s1_2,.s1_3,.s1_4,.s1_5,.s1_6,.s1_7,.s1_8').css("display","none");
+		setTimeout(function(){
+			document.getElementById("fanfare").play();
+		}, 1000);
+	}
 }
