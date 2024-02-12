@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2_wrap" onclick="showBG2()"><div class="s1_2"><img src="slide1/s1_2.png"/></div></div><div class="s1_3" onclick="openBox()"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_13"><img src="slide1/s1_13.png"/></div><div class="s1_14"><img src="slide1/s1_14.png"/></div><div class="s1_15"><img src="slide1/s1_15.gif"/></div><div class="s1_16"><img src="slide1/s1_16.png"/></div><audio id="unlock" src="slide1/unlock.mp3" type="audio/mpeg"></audio><audio id="fanfare" src="slide1/fanfare.mp3" type="audio/mpeg"></audio><audio id="success" src="slide1/success.mp3" type="audio/mpeg"></audio><audio id="swoosh" src="slide1/swoosh.mp3" type="audio/mpeg"></audio><audio id="bloop" src="slide1/bloop.mp3" type="audio/mpeg"></audio><div class="hit_1"><img src="slide1/pop1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_2"><img src="slide1/pop2.png" width="1024" height="768" alt=""/></div><div class="hit_pop2" onclick="hit_pop2()"></div><div class="hit_3"><img src="slide1/pop3.png" width="1024" height="768" alt=""/></div><div class="hit_pop3" onclick="hit_pop3()"></div><div class="hit_4"><img src="slide1/pop4.png" width="1024" height="768" alt=""/></div><div class="hit_pop4" onclick="hit_pop4()"></div><div class="hit_close1" onclick="hit_close1()"></div><div class="hit_close2" onclick="hit_close2()"></div><input type="text" id="text">';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2_wrap" onclick="showBG2()"><div class="s1_2"><img src="slide1/s1_2.png"/></div></div><div class="s1_3" onclick="openBox()"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_13"><img src="slide1/s1_13.png"/></div><div class="s1_14"><img src="slide1/s1_14.png"/></div><div class="s1_15"><img src="slide1/s1_15.gif"/></div><div class="s1_16"><img src="slide1/s1_16.png"/></div><audio id="unlock" src="slide1/unlock.mp3" type="audio/mpeg"></audio><audio id="fanfare" src="slide1/fanfare.mp3" type="audio/mpeg"></audio><audio id="success" src="slide1/success.mp3" type="audio/mpeg"></audio><audio id="swoosh" src="slide1/swoosh.mp3" type="audio/mpeg"></audio><audio id="bloop" src="slide1/bloop.mp3" type="audio/mpeg"></audio><div class="hit_1"><img src="slide1/pop1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_2"><img src="slide1/pop2.png" width="1024" height="768" alt=""/></div><div class="hit_pop2" onclick="hit_pop2()"></div><div class="hit_3"><img src="slide1/pop3.png" width="1024" height="768" alt=""/></div><div class="hit_pop3" onclick="hit_pop3()"></div><div class="hit_4"><img src="slide1/pop4.png" width="1024" height="768" alt=""/></div><div class="hit_pop4" onclick="hit_pop4()"></div><div class="hit_close1" onclick="hit_close1()"></div><div class="hit_close2" onclick="hit_close2()"></div><input type="text" id="text1"><input type="text" id="text2">';
 	break;
 
 }
@@ -514,6 +514,7 @@ function openBox() {
 /*--------------------- animation javascript -----------------------*/
 
 var a = 1;
+var b = 1;
 
 function hit_pop1() {
 	document.getElementById("bloop").play();
@@ -549,7 +550,7 @@ function hit_pop4() {
 function hit_close1() {
 	$('.hit_1,.hit_2,.hit_3,.hit_4').css("display","none");
 	$('.hit_close1').css("display","none");
-	var textBox = document.getElementById("text");
+	var textBox = document.getElementById("text1");
     textBox.value = a;
     a++;
 	if (textBox.value == 3) {
@@ -565,9 +566,9 @@ function hit_close1() {
 function hit_close2() {
 	$('.hit_1,.hit_2,.hit_3,.hit_4').css("display","none");
 	$('.hit_close1').css("display","none");
-	var textBox = document.getElementById("text");
-    textBox.value = a;
-    a++;
+	var textBox = document.getElementById("text2");
+    textBox.value = b;
+    b++;
 	if (textBox.value == 1) {
 		$('.s1_12,.s1_13,.s1_14,.s1_15').css("display","block");
 		$('.hit_pop1,.hit_pop2,.hit_pop3,.hit_pop4').css("display","none");
