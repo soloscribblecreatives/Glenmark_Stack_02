@@ -167,7 +167,7 @@
 
 
 
-.hit_1, .hit_2, .hit_3  {
+.hit_1, .hit_2, .hit_3, .hit_4  {
   position: absolute;
   width: 1024px;
   height: 768px;
@@ -181,6 +181,7 @@
   top: 301px;
   width: 285px;
   height: 149px;
+  display: none;
 	z-index: 30;
 }
 
@@ -190,6 +191,7 @@
   top: 303px;
   width: 285px;
   height: 149px;
+  display: none;
 	z-index: 30;
 }
 
@@ -199,10 +201,21 @@
   top: 573px;
   width: 285px;
   height: 149px;
+  display: none;
 	z-index: 30;
 }
 
-.hit_close1 {
+.hit_pop4 {
+	position: absolute;
+  left: 335px;
+  top: 209px;
+  width: 297px;
+  height: 345px;
+  display: none;
+	z-index: 30;
+}
+
+.hit_close1, .hit_close2 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
