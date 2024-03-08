@@ -347,7 +347,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2_wrap" onclick="showBG2()"><div class="s1_2"><img src="slide1/s1_2.png"/></div></div><div class="s1_3" onclick="openBox()"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_13"><img src="slide1/s1_13.png"/></div><div class="s1_14"><img src="slide1/s1_14.png"/></div><div class="s1_15"><img src="slide1/s1_15.gif"/></div><div class="s1_16"><img src="slide1/s1_16.png"/></div><audio id="unlock" src="slide1/unlock.mp3" type="audio/mpeg"></audio><audio id="fanfare" src="slide1/fanfare.mp3" type="audio/mpeg"></audio><audio id="success" src="slide1/success.mp3" type="audio/mpeg"></audio><audio id="swoosh" src="slide1/swoosh.mp3" type="audio/mpeg"></audio><audio id="bloop" src="slide1/bloop.mp3" type="audio/mpeg"></audio><div class="hit_1"><img src="slide1/pop1.png" width="1024" height="768" alt=""/></div><div class="hit_pop1" onclick="hit_pop1()"></div><div class="hit_2"><img src="slide1/pop2.png" width="1024" height="768" alt=""/></div><div class="hit_pop2" onclick="hit_pop2()"></div><div class="hit_3"><img src="slide1/pop3.png" width="1024" height="768" alt=""/></div><div class="hit_pop3" onclick="hit_pop3()"></div><div class="hit_4"><img src="slide1/pop4.png" width="1024" height="768" alt=""/></div><div class="hit_pop4" onclick="hit_pop4()"></div><div class="hit_close1" onclick="hit_close1()"></div><div class="hit_close2" onclick="hit_close2()"></div><input type="text" id="text1"><input type="text" id="text2">';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="wrap2-6"><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div></div><div class="wrap7-22"><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div><div class="s1_12"><img src="slide1/s1_12.png"/></div><div class="s1_13"><img src="slide1/s1_13.png"/></div><div class="s1_14"><img src="slide1/s1_14.png"/></div><div class="s1_15"><img src="slide1/s1_15.png"/></div><div class="s1_16"><img src="slide1/s1_16.png"/></div><div class="s1_17"><img src="slide1/s1_17.png"/></div><div class="s1_18"><img src="slide1/s1_18.png"/></div><div class="s1_19"><img src="slide1/s1_19.png"/></div><div class="s1_20"><img src="slide1/s1_20.png"/></div><div class="s1_21"><img src="slide1/s1_21.png"/></div><div class="s1_22"><img src="slide1/s1_22.png"/></div><div class="shape1"><img src="slide1/shape1.png"/></div><div class="shape2"><img src="slide1/shape2.png"/></div><div class="shape3"><img src="slide1/shape3.png"/></div><div class="shape4"><img src="slide1/shape4.png"/></div><div class="shape5"><img src="slide1/shape5.png"/></div><div class="shape6"><img src="slide1/shape6.png"/></div><div class="shape7"><img src="slide1/shape7.png"/></div><div class="shape8"><img src="slide1/shape8.png"/></div><div class="shape9"><img src="slide1/shape9.png"/></div></div><div class="s1_23"><img src="slide1/s1_23.png"></div><div class="s1_24"><img src="slide1/s1_24.png"/></div><div class="s1_25"><img src="slide1/s1_25.png"/></div><div class="s1_26"><img src="slide1/s1_26.png"/></div><div class="s1_27"><img src="slide1/s1_27.png"/></div><div class="s1_28"><img src="slide1/s1_28.png"/></div><div class="hitbg1" onclick="hitbg1()"></div><div class="hit1" onclick="hit1()"></div><div class="hit2" onclick="hit2()"></div><div class="hit3" onclick="hit3()"></div><audio id="swoosh" src="slide1/swoosh.mp3" type="audio/mpeg"></audio><audio id="unlock" src="slide1/unlock.mp3" type="audio/mpeg"></audio><audio id="success" src="slide1/success.mp3" type="audio/mpeg"></audio><audio id="whoosh" src="slide1/whoosh.mp3" type="audio/mpeg"></audio><audio id="fanfare" src="slide1/fanfare.mp3" type="audio/mpeg"></audio>';
 	break;
 
 }
@@ -493,88 +493,83 @@ $(document).ready(function(){
 
 /*--------------------- animation javascript -----------------------*/
 
-
-function showBG2() {
+function hitbg1() {
 	document.getElementById("swoosh").play();
-	$('.s1_3').css("display","block");
-	$('.s1_3').addClass("fadeInUp");
-	$(".s1_2_wrap").addClass("bounceOut");
-}
-
-function openBox() {
-	document.getElementById("success").play();
-	$('.s1_3').css("display","none");
-	$('.s1_4').css("display","block");
-	$('.s1_5').css("display","block");
+	$('.hitbg1').css("display","none");
+	$(".wrap2-6").addClass("bounceOut");
+	$('.s1_7').css("display","block");
+	$('.s1_8').css("display","block");
+	$('.s1_9').css("display","block");
+	$('.s1_10').css("display","block");
+	$('.s1_11').css("display","block");
+	$('.s1_12').css("display","block");
+	$('.s1_15').css("display","block");
+	$('.s1_19').css("display","block");
 	setTimeout(function(){
-		$('.hit_pop1,.hit_pop2,.hit_pop3,.hit_pop4').css("display","block");
+		$(".wrap2-6").css("display","none");
+		$('.hit1').css("display","block");
 	}, 1000);
 }
 
-/*--------------------- animation javascript -----------------------*/
-
-var a = 1;
-var b = 1;
-
-function hit_pop1() {
-	document.getElementById("bloop").play();
-	$('.hit_1').css("display","block");
-	$('.hit_close1').css("display","block");
-	$('.hit_pop1').css("display","none");
-	$('.s1_6').css("display","block");
+function hit1() {
+	document.getElementById("unlock").play();
+	$('.hit1').css("display","none");
+	$('.shape1').css("display","block");
+	$('.shape2').css("display","block");
+	$('.shape3').css("display","block");
+	$('.shape4').css("display","block");
+	setTimeout(function(){
+		document.getElementById("success").play();
+		$('.s1_11').css("display","none");
+		$('.s1_12').css("display","none");
+		$('.s1_13').css("display","block");
+		$('.s1_14').css("display","block");
+		$('.s1_16').css("display","block");
+		$('.hit2').css("display","block");
+	}, 2000);
 }
 
-function hit_pop2() {
-	document.getElementById("bloop").play();
-	$('.hit_2').css("display","block");
-	$('.hit_close1').css("display","block");
-	$('.hit_pop2').css("display","none");
-	$('.s1_7').css("display","block");
+function hit2() {
+	document.getElementById("unlock").play();
+	$('.hit2').css("display","none");
+	$('.shape5').css("display","block");
+	$('.shape6').css("display","block");
+	$('.shape7').css("display","block");
+	setTimeout(function(){
+		document.getElementById("success").play();
+		$('.s1_15').css("display","none");
+		$('.s1_16').css("display","none");
+		$('.s1_17').css("display","block");
+		$('.s1_18').css("display","block");
+		$('.s1_20').css("display","block");
+		$('.hit3').css("display","block");
+	}, 2000);
 }
 
-function hit_pop3() {
-	document.getElementById("bloop").play();
-	$('.hit_3').css("display","block");
-	$('.hit_close1').css("display","block");
-	$('.hit_pop3').css("display","none");
-	$('.s1_8').css("display","block");
-}
-
-function hit_pop4() {
-	document.getElementById("bloop").play();
-	$('.hit_4').css("display","block");
-	$('.hit_close2').css("display","block");
-	$('.hit_pop4').css("display","none");
-}
-
-function hit_close1() {
-	$('.hit_1,.hit_2,.hit_3,.hit_4').css("display","none");
-	$('.hit_close1').css("display","none");
-	var textBox = document.getElementById("text1");
-    textBox.value = a;
-    a++;
-	if (textBox.value == 3) {
-		$('.s1_12,.s1_13,.s1_14,.s1_15').css("display","block");
-		$('.hit_pop1,.hit_pop2,.hit_pop3,.hit_pop4').css("display","none");
-		$('.s1_2,.s1_3,.s1_4,.s1_5,.s1_6,.s1_7,.s1_8').css("display","none");
-		setTimeout(function(){
-			document.getElementById("fanfare").play();
-		}, 1000);
-	}
-}
-
-function hit_close2() {
-	$('.hit_1,.hit_2,.hit_3,.hit_4').css("display","none");
-	$('.hit_close1').css("display","none");
-	var textBox = document.getElementById("text2");
-    textBox.value = b;
-    b++;
-	if (textBox.value == 1) {
-		$('.s1_12,.s1_13,.s1_14,.s1_15').css("display","block");
-		$('.hit_pop1,.hit_pop2,.hit_pop3,.hit_pop4').css("display","none");
-		$('.s1_2,.s1_3,.s1_4,.s1_5,.s1_6,.s1_7,.s1_8').css("display","none");
-		setTimeout(function(){
-			document.getElementById("fanfare").play();
-		}, 1000);
-	}
+function hit3() {
+	document.getElementById("unlock").play();
+	$('.hit3').css("display","none");
+	$('.shape8').css("display","block");
+	$('.shape9').css("display","block");
+	setTimeout(function(){
+		document.getElementById("success").play();
+		$('.s1_19').css("display","none");
+		$('.s1_20').css("display","none");
+		$('.s1_21').css("display","block");
+		$('.s1_22').css("display","block");
+	}, 2000);
+	setTimeout(function(){
+		document.getElementById("whoosh").play();
+		$(".wrap7-22").addClass("rotateOut");
+	}, 3500);
+	setTimeout(function(){
+		document.getElementById("fanfare").play();
+		$(".wrap7-22").css("display","none");
+		$('.s1_23').css("display","block");
+		$('.s1_24').css("display","block");
+		$('.s1_25').css("display","block");
+		$('.s1_26').css("display","block");
+		$('.s1_27').css("display","block");
+		$('.s1_28').css("display","block");
+	}, 4000);
 }
